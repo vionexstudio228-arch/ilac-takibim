@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>İlaç Takibim</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f2fbfe;color:#123047}
+body:before{content:"💊  💊    💊       💊   💊";position:fixed;inset:0;z-index:-1;opacity:.07;font-size:55px;line-height:2.8;word-spacing:25px;transform:rotate(-12deg)}
+#turn{position:fixed;inset:0;background:white;z-index:10;display:grid;place-items:center;font-size:35px;font-weight:900;color:#10a5c5;animation:page 1.1s forwards}
+@keyframes page{0%{transform:perspective(1400px) rotateY(0)}100%{transform:perspective(1400px) rotateY(-105deg);opacity:0;visibility:hidden}}
+header{padding:18px 6%;background:#ffffffdd;backdrop-filter:blur(10px);position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:22px;font-weight:900}.logo span{color:#12a8c8}nav a{margin-left:20px;text-decoration:none;color:#123047;font-weight:bold}
+.hero{max-width:1100px;margin:auto;padding:75px 25px;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+h1{font-size:clamp(45px,7vw,75px);line-height:1;margin:15px 0}h1 span{color:#10a7c7}
+p{color:#607589;line-height:1.7;font-size:17px}.btn{display:inline-block;padding:15px 21px;border-radius:15px;text-decoration:none;font-weight:900;margin:10px 8px 0 0;cursor:pointer;border:0;font-size:15px}
+.primary{background:#12a8c8;color:white}.secondary{background:white;color:#123047;border:1px solid #d8e8ee}
+.phone{width:315px;height:620px;margin:auto;border:10px solid #111b25;border-radius:42px;background:#e9faff;box-shadow:0 20px 55px #16445a22;overflow:hidden;position:relative}
+.notch{height:24px;width:110px;background:#111b25;border-radius:0 0 18px 18px;margin:auto}.screen{padding:20px;background:linear-gradient(#f8feff,#e7f8fc);height:100%}
+.title{font-size:22px;text-align:center;font-weight:900;margin:12px 0 18px}.med{background:white;border-radius:20px;padding:16px;box-shadow:0 10px 25px #1b748822}
+.medtop{display:flex;gap:12px;align-items:center}.pill{width:58px;height:58px;border-radius:16px;object-fit:cover}.name{font-weight:900}.time{font-size:13px;color:#718096;margin-top:4px}
+.line{height:1px;background:#edf1f3;margin:15px 0}.status{display:flex;justify-content:space-between}.ok{color:#19834e;background:#e5f8ee;padding:7px 10px;border-radius:99px;font-weight:bold;font-size:13px}
+.bottom{position:absolute;left:17px;right:17px;bottom:17px;background:white;border:0;border-radius:17px;padding:14px;font-weight:900;color:#07809d}
+section{max-width:1100px;margin:auto;padding:80px 25px}h2{font-size:42px;margin:0 0 10px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.card{background:white;padding:25px;border-radius:22px;box-shadow:0 12px 35px #16445a12;border:1px solid #e5eef2}
+.download{background:#073e59;color:white;border-radius:28px;padding:35px;margin-top:30px;display:flex;justify-content:space-between;align-items:center;gap:20px}.download p{color:#d6f4fa}.download .btn{background:white;color:#073e59}
+footer{text-align:center;padding:40px;color:#72869a}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.download{display:block}nav{display:none}}
+</style></head>
+<body>
+<div id="turn">İlaç Takibim</div>
+<header><div class="logo">İlaç<span>Takibim</span></div><nav><a href="#uygulama">Uygulama</a><a href="#yorumlar">Yorumlar</a><a href="#indir">APK İndir</a></nav></header>
+<div class="hero"><div>
+<h1>İlacını <span>zamanında</span> hatırla.</h1>
+<p>İlaç Takibim, ilaçlarını ve kullanım saatlerini daha düzenli takip etmene yardımcı olmak için tasarlanmış sade ve kullanışlı bir uygulamadır.</p>
+<a class="btn primary" href="#indir">APK'yı İndir</a><a class="btn secondary" href="#uygulama">İncele</a>
+</div>
+<div class="phone"><div class="notch"></div><div class="screen">
+<div class="title">İlaç Takibim</div>
+<div class="med"><div class="medtop"><img class="pill" src="assets/ilac-gorseli.jpg" alt="İlaç">
+<div><div class="name">İlaç Takibi</div><div class="time">12:00 • Günlük</div></div></div>
+<div class="line"></div><div class="status"><span>Bugünkü doz</span><span class="ok">Takipte</span></div></div>
+<br><div class="med"><div class="status"><span>Sonraki hatırlatma</span><b>18:00</b></div></div>
+<button class="bottom" onclick="document.getElementById('indir').scrollIntoView()">İlaç Takibim</button>
+</div></div></div>
+<section id="uygulama"><h2>Uygulama hakkında</h2><p>İlaç Takibim, günlük ilaç kullanımını daha düzenli takip etmek isteyen kullanıcılar için hazırlanmıştır.</p>
+<div class="grid"><div class="card"><h3>⏰ Saatlerini takip et</h3><p>İlaç kullanım saatlerini tek yerde görmene yardımcı olur.</p></div>
+<div class="card"><h3>💊 İlaçlarını düzenle</h3><p>Takip etmek istediğin ilaçları kolayca görüntüleyebilirsin.</p></div>
+<div class="card"><h3>📱 Sade kullanım</h3><p>Temiz arayüz ile temel bilgilere hızlıca ulaşabilirsin.</p></div></div>
+<div class="download" id="indir"><div><h2 style="color:white;font-size:32px">İlaç Takibim'i indir</h2><p>Android APK dosyasını cihazına indir.</p></div>
+<a class="btn" id="apkBtn" download="ilac-takibim.apk">⬇ APK İndir</a></div></section>
+<section id="yorumlar"><h2>Kullanıcı yorumları</h2><div class="grid">
+<div class="card"><b>★★★★★</b><p>“Arayüzü sade olduğu için ilaç saatlerimi kontrol etmek kolay oldu.”</p><strong>— Mert</strong></div>
+<div class="card"><b>★★★★★</b><p>“Gereksiz karmaşa yok, uygulamada ne yapacağımı hemen anladım.”</p><strong>— Zeynep</strong></div>
+<div class="card"><b>★★★★☆</b><p>“İlaçlarımı tek ekranda takip edebilmek kullanışlı.”</p><strong>— Emre</strong></div></div></section>
+<footer>© 2026 İlaç Takibim</footer>
+<script>
+document.getElementById("apkBtn").href="assets/ilac-takibim.apk";
+</script></body></html>
